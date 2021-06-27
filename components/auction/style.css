@@ -1,0 +1,32 @@
+.article-mountain {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 10px;
+}
+
+article {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+article .title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+img {
+  min-width: 200px;
+  width: 100%;
+  max-height: 400px;
+}
+
+article div {
+  display: block;
+  font-size: 12px;
+  clear: both;
+}
