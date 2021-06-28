@@ -1,29 +1,29 @@
 <template>
   <div class="container">
-    
-  <NuxtLink to="/">Home page</NuxtLink>
-  <NuxtLink to="/about">About mountain page</NuxtLink>
-<NuxtLink to="/nav">Nav page</NuxtLink>
+    <NuxtLink to="/">Home page</NuxtLink>
+    <NuxtLink to="/about">About mountain page</NuxtLink>
+    <NuxtLink to="/nav">Nav page</NuxtLink>
 
     <div>
       <logo />
-      <h1 class="title">
-        nuxtjs
-      </h1>
-      
+      <h1 class="title">nuxtjs</h1>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from "~/components/Logo.vue";
+import Vue from "vue";
+import { BootstrapVue } from "bootstrap-vue";
+
+Vue.use(BootstrapVue);
 
 export default {
   components: {
-    Logo
+    Logo,
   },
-  title: "Thinh"
-}
+  title: "Thinh",
+};
 </script>
 
 <style>
@@ -37,8 +37,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
