@@ -29,21 +29,22 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
-    "bootstrap-vue/nuxt",
-    // Doc: https://github.com/nuxt-community/style-resources-module
-    "@nuxtjs/style-resources",
-  ],
+  modules: ["bootstrap-vue/nuxt", "@nuxtjs/style-resources", "@nuxtjs/axios"],
   bootstrapVue: {
-    bootstrapCSS: false,
-    bootstrapVueCSS: false,
+    bootstrapCSS: true,
+    bootstrapVueCSS: true,
+    icons: true,
+  },
+  axios: {
+    baseURL: "http://localhost:4000",
+    proxy: true,
+    retry: { retries: 2 },
+  },
+  proxy: {
+    "/api/": "http://api.example.com",
+    "/api2/": "http://localhost:4000",
   },
 
-  /*
-   ** Style resources
-   */
   styleResources: {
     scss: ".assets/scss/*.scss",
   },
